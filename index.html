@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ポートフォリオサイトへようこそ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- position:fixed を指定する -->
+    <header>
+        <!--ナビゲーションメニューを書く-->
+        <!--横並びのレイアウトを作るには、display:flex;-->
+        <nav class="navigation_area">
+            <!--ページ内のリンクを作るにはid名を指定。ページ内移動ができる-->
+            <a href=""           class="navigation_content">サイトロゴ</a>
+            <a href="#about"     class="navigation_content">About</a>
+            <a href="#works"     class="navigation_content">Works</a>
+            <a href="#portfolio" class="navigation_content">Portfolio</a>
+            <a href="#contact"   class="navigation_content">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- position:relative; -->
+        <section class="main_image_area">
+            <!--imgタグを使用する場合、何の装飾もしていない場合、原寸で表示されてしまう。-->
+            <img class="main_image" src="main_image.png" alt="">
+            <div class="main_image_title">ようこそポートフォリオサイトへ</div>
+        </section>
+
+        <!--サイトの本文を書く-->
+
+        <section id="about">
+            <h2>About</h2>
+            
+            <div class="about_area">
+                <div class="about_icon">
+                    <img src="about.jpg" alt="about.jpg">
+                </div>
+                <div class="about_description">
+                    <div class="about_description_name">テスト太郎</div>
+                    <div class="about_description_content">
+                        <p>WordPress案件、PHP、JavaScriptなど対応しています。</p>
+                        <p>御用の方は下記お問い合わせ欄からお問い合わせください。</p>
+                    </div>
+                    <div class="about_description_skill">
+                        
+                        <h3>スキルセット</h3>
+                        <!-- 同じ要領でアイコンを並べる。 -->
+                        <div class="about_description_skill_icon">
+                            <img src="wordpress-icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <section id="works">
+            <h2>Works</h2>
+        </section>
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+
+            <div class="portfolio_area">
+
+                <div class="portfolio_content">
+
+                    <div class="portfolio_content_inner">
+                        <div class="portfolio_content_image_area">
+                            <img class="portfolio_content_image" src="portfolio_1.jpg" alt="">
+                        </div>
+                        <div class="portfolio_content_description_area">
+                            <p>大学のウェブサイト(Wordpress)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio_content">
+
+                    <div class="portfolio_content_inner">
+                        <div class="portfolio_content_image_area">
+                            <img class="portfolio_content_image" src="portfolio_1.jpg" alt="">
+                        </div>
+                        <div class="portfolio_content_description_area">
+                            <p>大学のウェブサイト(Wordpress)</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portfolio_content">
+
+                    <div class="portfolio_content_inner">
+                        <div class="portfolio_content_image_area">
+                            <img class="portfolio_content_image" src="portfolio_1.jpg" alt="">
+                        </div>
+                        <div class="portfolio_content_description_area">
+                            <p>大学のウェブサイト(Wordpress)</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <div class="contact_area">
+
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXzYJTl2PKSJVMz7XaZNHe1QnIDrbGvoiHoxIagjOB3eOeMg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            
+            </div>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+
+    <footer>
+        <!--連絡先・所在地を書く-->
+
+    </footer>
+
+
+
+</body>
+</html>

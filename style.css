@@ -1,0 +1,169 @@
+html {
+    /* リンククリックでスクロールする際、スムーズにスクロールする */
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+}
+
+/* 親要素の大きさに合わせて、画像のサイズを調整する。*/
+img{
+    width:100%;
+}
+
+/* aタグのデフォルトの装飾を打ち消す */
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* デザインでは基本的には原色は指定しない。#000000やblackなど*/
+header{
+    background:#2d2d2d;
+    color:white;
+
+    /* position:fixed;を使うと子要素の大きさに幅が揃えられるので、width:100%; とセットで使う。*/
+    position:fixed;
+    width:100%;
+
+    /* 後続の要素よりも前面に表示させる */
+    z-index:1;
+}
+.navigation_area{
+    display:flex;
+}
+.navigation_content{
+    padding:1rem 2rem;
+
+    /* transitionを使って、装飾の変化に遅延を与える。(アニメーション) */
+    transition:0.25s;
+
+}
+/* マウスのホバー時に装飾を変更するには、擬似クラスのhoverを使う。 */
+.navigation_content:hover{
+    background:white;
+    color:#2d2d2d;
+}
+
+/* 高さを画面に合わせる*/
+.main_image{
+    height:100vh;
+    object-fit: cover;
+}
+
+
+.main_image_area{
+    position:relative;
+}
+.main_image_title{
+    color:white;
+    font-size:2rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+
+
+
+/* about area */
+.about_area{
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 2rem;
+
+    /* justify-content を指定して各コンテナを中央に寄せるなど、 */
+}
+.about_icon{
+    width:50%;
+}
+.about_description{
+    width:50%;
+}
+
+.about_description_name{
+    font-size:2rem;
+    font-weight:bold;
+    text-align:center;
+
+    /* text-shadowを使って影をつける */
+    /*
+    color:white;    
+    text-shadow: rgb(0, 0, 0) 4px 0px 0px, rgb(0, 0, 0) 3.87565px 0.989616px 0px, rgb(0, 0, 0) 3.51033px 1.9177px 0px, rgb(0, 0, 0) 2.92676px 2.72656px 0px, rgb(0, 0, 0) 2.16121px 3.36588px 0px, rgb(0, 0, 0) 1.26129px 3.79594px 0px, rgb(0, 0, 0) 0.282949px 3.98998px 0px, rgb(0, 0, 0) -0.712984px 3.93594px 0px, rgb(0, 0, 0) -1.66459px 3.63719px 0px, rgb(0, 0, 0) -2.51269px 3.11229px 0px, rgb(0, 0, 0) -3.20457px 2.39389px 0px, rgb(0, 0, 0) -3.69721px 1.52664px 0px, rgb(0, 0, 0) -3.95997px 0.56448px 0px, rgb(0, 0, 0) -3.97652px -0.432781px 0px, rgb(0, 0, 0) -3.74583px -1.40313px 0px, rgb(0, 0, 0) -3.28224px -2.28625px 0px, rgb(0, 0, 0) -2.61457px -3.02721px 0px, rgb(0, 0, 0) -1.78435px -3.57996px 0px, rgb(0, 0, 0) -0.843183px -3.91012px 0px, rgb(0, 0, 0) 0.150409px -3.99717px 0px, rgb(0, 0, 0) 1.13465px -3.8357px 0px, rgb(0, 0, 0) 2.04834px -3.43574px 0px, rgb(0, 0, 0) 2.83468px -2.82216px 0px, rgb(0, 0, 0) 3.44477px -2.03312px 0px, rgb(0, 0, 0) 3.84068px -1.11766px 0px, rgb(0, 0, 0) 3.9978px -0.132717px 0px;
+    */
+}
+.about_description_content{
+    margin:1rem;
+}
+
+.about_description_skill{
+    margin:2rem;
+}
+.about_description_skill_icon{
+    display:inline-block;
+    width:4rem;
+    height:4rem;
+}
+
+
+
+
+/* portfolio_area  */
+.portfolio_area{
+    display:flex;
+    flex-wrap:wrap;
+}
+.portfolio_content{
+    /* width:50%; */
+    
+    width:calc(100% / 3);
+}
+/* display:flex; を使って、中のコンテナにmarginやpaddingを与えたい場合、コンテナに子要素を作り、そこにpaddingやmarginを当てる */
+.portfolio_content_inner{
+    margin:1rem;
+}
+
+/* 画像を高さに合わせて縮小させる。TIPS: ただしレイアウトに問題が出てくる場合もあるので、可能であれば画像編集ツールでサイズを合わせておいたほうが良い。*/
+.portfolio_content_image{
+    height:300px;
+    object-fit:contain;
+
+    transition:0.2s;
+}
+.portfolio_content_image:hover{
+    /* 表示倍率を変える */
+    transform:scale(1.3, 1.3);
+}
+/* ↑のhoverで画像を大きく表示させた時、はみ出たらはみ出た部分を切り取る */
+.portfolio_content_image_area{
+    overflow:hidden;
+}
+
+.portfolio_content_description_area{
+    font-size:1.2rem;
+    text-align:center;
+}
+
+
+
+/* contact area */
+
+.contact_area{
+    text-align:center;
+}
+
+
+/* sp mode */
+@media (max-width:768px){
+    .about_icon{
+        width:100%;
+    }
+    .about_description{
+        width:100%;
+    }
+    .portfolio_content{    
+        width:100%
+    }
+
+}
